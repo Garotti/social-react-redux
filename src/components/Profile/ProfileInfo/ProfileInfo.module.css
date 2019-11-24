@@ -1,0 +1,10 @@
+.content{
+    grid-area: c;
+}
+.content img {
+    width: 1100px;
+    height: 300px;
+}
+.descBlock{
+    padding: 10px;
+}

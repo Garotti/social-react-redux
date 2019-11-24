@@ -1,0 +1,13 @@
+.content{
+    width: 1100px;
+    height: 800px;
+}
+.friendsNav{
+    display: grid;
+    grid-template-columns: 3fr 3fr 8fr;
+}
+.friendsNav button{
+    width: 100px;
+    grid-column-end: 5;
+    margin-right: 50px;
+}

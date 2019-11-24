@@ -1,0 +1,22 @@
+.content{
+    grid-area: c;
+}
+.content img {
+    width: 1100px;
+    height: 300px;
+}
+.post_but:hover{
+    background-color: orange;
+    color: black;
+}
+.post_but{
+    padding: 13px 40px;
+    color: beige;
+    font-size: 20px;
+    background-color: cornflowerblue;
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+.postsBlock{
+    padding: 10px;
+}
