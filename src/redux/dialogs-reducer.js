@@ -23,23 +23,28 @@ let initialState = {
     status: [
         {id: 1, status: 'oh my GOD'},
         {id: 2, status: 'What\'s up'},
-        {id: 3, status: 'legend never die'},
-        {id: 4, status: 'only god can judge me'},
-        {id: 5, status: 'i\'m cool you know'},
+        {id: 3, status: 'wag1'},
+        {id: 4, status: 'only GOD can judge me'},
+        {id: 5, status: 'Study the blade'},
     ],
     newMessageBody: ''
 };
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
-            let body = state.newMessageBody;
-            state.newMessageBody = '';
-            state.messages.push({id: 6, message: body})
-            return state;
+        case SEND_MESSAGE: {
+            let stateCopy = {...state}; // create copy of state
+            stateCopy.messages = [...state.messages]; // create deep copy of messages
+
+            let body = stateCopy.newMessageBody;
+            stateCopy.newMessageBody = '';
+            stateCopy.messages.push({id: 6, message: body});
+            return stateCopy;
+        }
         case UPDATE_NEW_MESSAGE_BODY: {
-            state.newMessageBody = action.body;
-            return state;
+            let stateCopy = {...state};
+            stateCopy.newMessageBody = action.body;
+            return stateCopy;
         }
         default:
             return state;
