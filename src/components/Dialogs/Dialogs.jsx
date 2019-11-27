@@ -10,11 +10,11 @@ const Dialogs = (props) => {
 
     //--Отрисовка стейта
     let dialogsElement = state.dialogs.map(
-        dialog => <DialogItem name={dialog.name} id={dialog.id}/>
+        dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>
     );
     let messageElement = state.messages.map(res => {
        return (
-           <Message id={res.id} message={res.message}/>
+           <Message id={res.id} key={res.id} message={res.message}/>
        )
     });//--
 
