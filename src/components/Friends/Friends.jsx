@@ -23,7 +23,7 @@ const Friends = (props) => {
             <div className={s.friendsNav}>
                 <div>All friends</div>
                 <div>Friends online</div>
-                <button>find friends</button>
+                <NavLink to={'/users'}>find users</NavLink>
             </div>
             <div>find friends</div>
             <div>

@@ -10,3 +10,10 @@
     width: 100px;
     height: 100px;
 }
+.selectedPage{
+    font-weight: bold;
+}
+.pageNumber{
+    margin-top: 80px;
+    display: flex;
+}
