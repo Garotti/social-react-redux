@@ -17,3 +17,6 @@
     margin-top: 80px;
     display: flex;
 }
+.preload {
+    color: red;
+}

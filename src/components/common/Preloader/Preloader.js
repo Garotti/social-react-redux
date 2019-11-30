@@ -1,0 +1,10 @@
+import preloader from "../../../assets/images/Gear-0.2s-131px.svg";
+import React from "react";
+
+let Preloader = (props) => {
+    return (<div>
+            <img src={preloader} alt={'preloader'}/>
+        </div>
+    )
+};
+export default Preloader;
