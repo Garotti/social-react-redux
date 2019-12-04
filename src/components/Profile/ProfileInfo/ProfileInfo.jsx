@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
     return (
         <div className={s.content}>
             <div className={s.descBlock}>
-                <img src={props.profile.photos.large} alt="ava"/> } <br/>
+                <img src={props.profile.photos.large} alt="ava"/><br/>
                 <h4>{props.profile.aboutMe}</h4>
                 <i>{props.profile.lookingForAJobDescription}</i>
             </div>

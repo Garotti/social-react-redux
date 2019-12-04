@@ -1,7 +1,10 @@
 header img {
     width: 200px;
 }
-
+.loginBlock{
+    background: red;
+    float: right;
+}
 .header{
     grid-area: h;
     background: rgb(143,201,213);
