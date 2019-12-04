@@ -2,11 +2,24 @@ header img {
     width: 200px;
 }
 .loginBlock{
-    background: red;
-    float: right;
+    display: flex;
+    padding-left: 100px;
 }
 .header{
     grid-area: h;
     background: rgb(143,201,213);
     background: linear-gradient(37deg, rgba(143,201,213,1) 24%, rgba(62,119,255,1) 85%);
+}
+.loginBlock img {
+    height: 50px;
+    width: 50px;
+}
+.qq{
+    float: right;
+    padding-right: 50px;
+}
+.qq img {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
 }

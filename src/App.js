@@ -16,7 +16,7 @@ const App = () => {
                 <Particles params={particleOpt}/>
             </div>
             <div className={'app-wrapper'}>
-                <HeaderContainer/>
+                <HeaderContainer />
                 <Navbar/>
                 <div className={'app-wrapper-content '}>
                     <Redirect from={'/'} to={'/profile'} />
