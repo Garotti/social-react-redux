@@ -19,7 +19,7 @@ const App = () => {
                 <HeaderContainer />
                 <Navbar/>
                 <div className={'app-wrapper-content '}>
-                    {/*<Redirect from={'/'} to={'/profile'} />*/}
+                    <Redirect from={'/'} to={'/profile'} />
                     <Route path={'/dialogs'}
                            render={() => <DialogsContainer/>}/>
                     <Route path={'/profile/:userId?'}
@@ -34,7 +34,7 @@ const App = () => {
         </div>
     );
 };
-
+// Redirect work wrong after refresh
 
 const particleOpt = {
     particles: {
