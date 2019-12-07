@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Friends.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink, Redirect} from "react-router-dom";
 import FriendsItem from './FriendsItem/FriendsItem';
 import Status from './Status/Status';
 
@@ -17,6 +17,8 @@ const Friends = (props) => {
             <Status status={st.status}/>
         )
     });
+
+    if (!props.isAuth) return <Redirect  to={'/login'}/>;
 
     return (
         <div className={s.content}>

@@ -8,6 +8,7 @@ import FriendsContainer from "./components/Friends/FriendsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import LoginPage from "./components/Login/Login";
 
 const App = () => {
     return (
@@ -19,7 +20,7 @@ const App = () => {
                 <HeaderContainer />
                 <Navbar/>
                 <div className={'app-wrapper-content '}>
-                    <Redirect from={'/'} to={'/profile'} />
+                    {/*<Redirect from={'/'} to={'/profile'} />*/}
                     <Route path={'/dialogs'}
                            render={() => <DialogsContainer/>}/>
                     <Route path={'/profile/:userId?'}
@@ -28,12 +29,16 @@ const App = () => {
                            render={() => <FriendsContainer/>}/>
                     <Route path={'/users'}
                            render={() => <UsersContainer/>}/>
+                    <Route path={'/login'}
+                           render={() => <LoginPage />}/>
 
                 </div>
             </div>
         </div>
     );
 };
+
+
 // Redirect work wrong after refresh
 
 const particleOpt = {
