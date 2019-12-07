@@ -18,8 +18,6 @@ const Friends = (props) => {
         )
     });
 
-    if (!props.isAuth) return <Redirect  to={'/login'}/>;
-
     return (
         <div className={s.content}>
             <div className={s.friendsNav}>
@@ -33,7 +31,6 @@ const Friends = (props) => {
                 <div>
                 {friendsElement}
                 </div>
-
                 <p>{statusElement}</p>
                 <NavLink to={'/dialogs'}>messages</NavLink>
             </div>
