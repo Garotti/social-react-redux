@@ -20,7 +20,7 @@ const App = () => {
                 <HeaderContainer />
                 <Navbar/>
                 <div className={'app-wrapper-content '}>
-                    {/*<Redirect from={'/'} to={'/profile'} />*/}
+                    <Redirect from={'/'} to={'/profile'} />
                     <Route path={'/dialogs'}
                            render={() => <DialogsContainer/>}/>
                     <Route path={'/profile/:userId?'}
