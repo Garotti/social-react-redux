@@ -27,12 +27,23 @@ export const usersAPI = {
                 return res.data;
             })
     },
+};
+
+export const profileAPI = {
     profileUser(userId) {
         return instance.get(`profile/` + userId,)
             .then(res => {
                 return res.data;
             });
     },
+    getUserStatus(userId) {
+        return instance.get(`profile/status/${userId}`);
+    },
+    updateStatus(status) {
+        return instance.put('profile/status', {status: status})
+    }
+};
+export const authAPI = {
     authUser() {
         return instance.get(`auth/me`,)
             .then(res => {
