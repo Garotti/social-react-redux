@@ -15,33 +15,42 @@ const authReducer = (state = initialState, action) => {
         case SET_AUTH_USER_DATA :
             return {
                 ...state,
-                ...action.data,
-                isAuth: true
-                };
-        case SET_USER_PROFILE:
-            return {
-                ...state,
-                profile: action.profile,
+                ...action.payload,
             };
         default:
             return state;
     }
 };
 
-export const setAuthUserData = (userId, email, login) => ({type: SET_AUTH_USER_DATA, data: {userId,email,login}});
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+export const setAuthUserData = (userId, email, login, isAuth) => ({type: SET_AUTH_USER_DATA, payload: {userId, email, login, isAuth}});
+export const getAuthUserData = () => (dispatch) => {
+    authAPI.me()
+        .then(res => {
+            if (res.data.resultCode === 0) {
+                let {id,login, email} = res.data.data;
+                dispatch(setAuthUserData(id, email, login, true));
+                debugger;
+            }
+        });
+};
 
+export const login = (email,password,rememberMe,userId) => (dispatch) => {
+    authAPI.login(email,password,rememberMe,userId)
+        .then(res => {
+            if (res.data.resultCode === 0) {
+                userId = res.data.data.userId;
+                dispatch(getAuthUserData(userId));
+            }
+        });
+};
 
-export const getAuthUserData = () => {
-    return (dispatch) => {
-        authAPI.authUser()
-            .then(data => {
-                if (data.resultCode === 0) {
-                    let {id, login, email} = data.data;
-                    dispatch(setAuthUserData(id, email, login));
-                }
-            });
-    }
+export const logout = () => (dispatch) => {
+    authAPI.logout()
+        .then(res => {
+            if (res.data.resultCode === 0) {
+                dispatch(setAuthUserData(null, null, null, false))
+            }
+        });
 };
 
 export default authReducer;

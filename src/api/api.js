@@ -44,10 +44,13 @@ export const profileAPI = {
     }
 };
 export const authAPI = {
-    authUser() {
+    me() {
         return instance.get(`auth/me`,)
-            .then(res => {
-                return res.data;
-            })
     },
+    login(email,password,rememberMe = false) {
+        return instance.post(`auth/login`, {email,password,rememberMe})
+    },
+    logout() {
+        return instance.delete(`auth/login`)
+    }
 };

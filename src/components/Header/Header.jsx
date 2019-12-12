@@ -9,8 +9,14 @@ const Header = (props) => {
         <header className={s.header}>
             <img src="https://vtol.org/images/dmImage/SourceImage/vfs-straight-small3.png" alt="logo"/>
             <div className={s.qq}>
-                { !props.profile ? <Preloader /> : <img src={props.profile.photos.small} alt="ava_small"/>}
-                {props.isAuth ? props.login : <NavLink to={'/login'}>Login</NavLink>}
+                { !props.profile
+                    ? <Preloader />
+                    : <img src={props.profile.photos.small} alt="ava_small"/>}
+            </div>
+            <div className={s.gg}>
+                {props.isAuth
+                    ? <div> <span>{props.login}</span> <button onClick={props.logout}>Log out</button></div>
+                    : <NavLink to={'/login'}>Login</NavLink>}
             </div>
         </header>
     );
