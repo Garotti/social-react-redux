@@ -9,8 +9,7 @@ import {getAuthUserData, setAuthUserData} from "../../redux/auth-reducer";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        // реагуэ на переданий в URL параменрт id
-        let userId = this.props.match.params.userId;
+        let userId = this.props.match.params.userId; // переданий в URL id
         if (!userId) {
             userId = this.props.autorizedUserId;
         }
