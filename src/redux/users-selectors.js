@@ -6,7 +6,6 @@ export const getUsersSelector = (state) => {
 
 export const getUsersSuperSelector = createSelector(getUsersSelector,
     (users) => {
-    debugger;
     return  users.filter(u => true);
 });
 
