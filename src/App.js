@@ -5,21 +5,21 @@ import Navbar from './components/Navbar/Navbar'
 import {Redirect, Route, withRouter} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
-import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
-import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
 import {connect} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import {compose} from "redux";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 class App extends React.Component {
 
     componentDidMount() {
         this.props.initializeApp();
     }
-
+//main
     render() {
         if (!this.props.initialized){
             return <Preloader />

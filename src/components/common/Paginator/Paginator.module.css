@@ -1,0 +1,10 @@
+.selectedPage{
+    font-weight: bold;
+}
+.pageNumber{
+    margin-top: 80px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(35, 1fr);
+    grid-template-rows: repeat(0, 100px);
+}

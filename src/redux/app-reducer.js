@@ -9,7 +9,6 @@ let initialState = {
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_AUTH_USER_DATA:
-            debugger;
             return {
                 ...state,
                 initialized: true,
