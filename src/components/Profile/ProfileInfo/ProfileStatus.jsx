@@ -36,6 +36,7 @@ debugger;
             <div>
                 {!this.state.editMode
                     ? <div>
+                        <b>Status</b>:
                         <span onDoubleClick={this.activateEditMode}>
                             {this.state.status || this.props.status}
                         </span>
