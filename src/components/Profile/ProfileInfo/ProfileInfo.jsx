@@ -2,16 +2,25 @@ import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
+import userPhoto from "../../../assets/images/qq.jpg";
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
     if (!profile) {
         return <Preloader/>
     }
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            savePhoto(e.target.files[0]);
+        }
+    };
+
     return (
         <div className={s.content}>
             <div className={s.descBlock}>
-                {!profile.photos.large ? <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkuXGpKBmltWiDRcpx7zrbSAbeBYnS_KQL4ItAAXn1t6RyRE0&s" alt="ava"/></div>
-                    : <img src={profile.photos.large} alt="ava"/> }<br/>
+                <img src={profile.photos.large || userPhoto} alt="ava"/>
+                <br/>
+                {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
                 <h4>{profile.aboutMe}</h4>
                 <ProfileStatus status={status.data} updateStatus={updateStatus}/>
                 <i>{profile.lookingForAJobDescription}</i>
