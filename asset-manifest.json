@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/social-react-redux/static/css/main.fa6fb5e0.chunk.css",
+    "main.js": "/social-react-redux/static/js/main.57b24671.chunk.js",
+    "main.js.map": "/social-react-redux/static/js/main.57b24671.chunk.js.map",
+    "runtime-main.js": "/social-react-redux/static/js/runtime-main.f690f6f4.js",
+    "runtime-main.js.map": "/social-react-redux/static/js/runtime-main.f690f6f4.js.map",
+    "static/css/2.d06c8509.chunk.css": "/social-react-redux/static/css/2.d06c8509.chunk.css",
+    "static/js/2.ac0e1299.chunk.js": "/social-react-redux/static/js/2.ac0e1299.chunk.js",
+    "static/js/2.ac0e1299.chunk.js.map": "/social-react-redux/static/js/2.ac0e1299.chunk.js.map",
+    "static/css/3.bea11ed7.chunk.css": "/social-react-redux/static/css/3.bea11ed7.chunk.css",
+    "static/js/3.92d30dce.chunk.js": "/social-react-redux/static/js/3.92d30dce.chunk.js",
+    "static/js/3.92d30dce.chunk.js.map": "/social-react-redux/static/js/3.92d30dce.chunk.js.map",
+    "static/css/4.af296d73.chunk.css": "/social-react-redux/static/css/4.af296d73.chunk.css",
+    "static/js/4.5b151043.chunk.js": "/social-react-redux/static/js/4.5b151043.chunk.js",
+    "static/js/4.5b151043.chunk.js.map": "/social-react-redux/static/js/4.5b151043.chunk.js.map",
+    "index.html": "/social-react-redux/index.html",
+    "precache-manifest.beea07141fe149d005293917de59d216.js": "/social-react-redux/precache-manifest.beea07141fe149d005293917de59d216.js",
+    "service-worker.js": "/social-react-redux/service-worker.js",
+    "static/css/2.d06c8509.chunk.css.map": "/social-react-redux/static/css/2.d06c8509.chunk.css.map",
+    "static/css/3.bea11ed7.chunk.css.map": "/social-react-redux/static/css/3.bea11ed7.chunk.css.map",
+    "static/css/4.af296d73.chunk.css.map": "/social-react-redux/static/css/4.af296d73.chunk.css.map",
+    "static/css/main.fa6fb5e0.chunk.css.map": "/social-react-redux/static/css/main.fa6fb5e0.chunk.css.map",
+    "static/media/Gear-0.2s-131px.svg": "/social-react-redux/static/media/Gear-0.2s-131px.725fa68f.svg",
+    "static/media/font-awesome.min.css": "/social-react-redux/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/qq.jpg": "/social-react-redux/static/media/qq.7b528d63.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f690f6f4.js",
+    "static/css/2.d06c8509.chunk.css",
+    "static/js/2.ac0e1299.chunk.js",
+    "static/css/main.fa6fb5e0.chunk.css",
+    "static/js/main.57b24671.chunk.js"
+  ]
+}
