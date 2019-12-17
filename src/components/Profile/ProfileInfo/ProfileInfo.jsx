@@ -7,7 +7,6 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     if (!profile) {
         return <Preloader/>
     }
-    debugger;
     return (
         <div className={s.content}>
             <div className={s.descBlock}>
