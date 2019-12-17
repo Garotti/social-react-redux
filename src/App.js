@@ -21,9 +21,9 @@ class App extends React.Component {
     }
 //main
     render() {
-        if (!this.props.initialized){
-            return <Preloader />
-        }
+        // if (!this.props.initialized){
+        //     return <Preloader />
+        // }
         return (
             <div className={''}>
                 <div className={'particles'}>

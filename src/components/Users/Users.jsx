@@ -17,7 +17,7 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, users, ...p
                                       key={u.id}/>)
                 }
             </div>
-            <div>
+            <div className={s.paginator}>
                 <Paginator currentPage={currentPage}
                            onPageChanged={onPageChanged}
                            totalUsersCount={totalUsersCount}
