@@ -20,7 +20,7 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className={s.item}>
-                <NavLink  to="#">
+                <NavLink  to="/news">
                     <FaNewspaper className={s.icon}/> News
                 </NavLink>
             </div>

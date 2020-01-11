@@ -1,0 +1,25 @@
+.loginForm{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.login{
+    margin-left: 5px;
+    background: aquamarine;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 2px solid aquamarine;
+}
+.login:hover{
+    background: #2a69a1;
+    border: 2px solid white;
+    color: white;
+    transition: 0.3s;
+}
+.loginHeader{
+    color: white;
+    text-align: center;
+}
+.rememberMe {
+}

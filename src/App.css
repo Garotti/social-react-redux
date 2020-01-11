@@ -11,13 +11,30 @@ body {
 }
 
 .app-wrapper {
+    margin: 0 200px;
     display: grid;
-    margin: 0 300px;
     overflow-x: hidden;
     grid-template-areas: "h h" "n c";
     grid-template-rows: 60px 1fr;
     grid-template-columns: 1fr 11fr;
     /*grid-gap: 10px;*/
+}
+
+@media (max-width: 1200px) {
+    .app-wrapper{
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .app-wrapper{
+        margin: 0 50px;
+    }
+}
+@media (max-width: 850px) {
+    .app-wrapper{
+        margin: 0 0;
+    }
 }
 
 .app-wrapper-content {

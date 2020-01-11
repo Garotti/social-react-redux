@@ -1,0 +1,37 @@
+.main{
+    border-radius: 50px;
+    border: 1px solid aquamarine;
+    background: cadetblue;
+    text-align: center;
+    overflow: hidden;
+}
+.content{
+    width: 900px;
+    margin-left: 100px;
+}
+.imageUrl{
+    border-radius: 5px;
+    width: 900px;
+    height: 400px;
+}
+.title{
+    margin: 0 0 10px 0;
+    color: black;
+}
+.author{
+    margin: 0;
+    padding: 20px;
+}
+.url{
+    background: aquamarine;
+    border: 2px solid aquamarine;
+    padding: 5px 100px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.url:hover{
+    background: none;
+    border: 2px solid white;
+    color: white;
+}

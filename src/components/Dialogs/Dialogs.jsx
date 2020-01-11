@@ -20,9 +20,9 @@ const Dialogs = (props) => {
     });//--
 
     let addNewMessage = (values) => {
-        props.onSendNewMessage(values.newMessageBody)
+        props.onSendNewMessage(values.newMessageBody);
+        values.newMessageBody = "";
     };
-
     if (!props.isAuth) return <Redirect  to={'/login'}/>;
 
     return (
@@ -30,6 +30,7 @@ const Dialogs = (props) => {
             <div>
                 {dialogsElement}
             </div>
+            <hr/>
             <div className={s.messages}>
                 <div>{messageElement}</div>
                 <AddMessageFormRedux  onSubmit={addNewMessage}/>

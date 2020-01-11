@@ -28,29 +28,33 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
     return (
         <div className={s.content}>
             <div className={s.descBlock}>
-                <img src={profile.photos.large || userPhoto} alt="ava"/><br/>
-                {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
-                {editMode
-                    ? <ProfileDataForm initialValues={profile}
+                    <div>
+                        <img src={profile.photos.large || userPhoto} alt="ava"/><br/>
+                    </div>
+                    <div>
+                    {editMode
+                        ? <ProfileDataForm initialValues={profile}
+                                           profile={profile}
+                                           onSubmit={onSubmit}/>
+                        : <ProfileData goToEditMode={() => {
+                            setEditMode(true)
+                        }}
                                        profile={profile}
-                                       onSubmit={onSubmit}/>
-                    : <ProfileData goToEditMode={() => {
-                        setEditMode(true)
-                    }}
-                                   profile={profile}
-                                   isOwner={isOwner}/>}
-                <ProfileStatus status={status.data} updateStatus={updateStatus}/>
-                <i>{profile.lookingForAJobDescription}</i>
+                                       isOwner={isOwner}/>}
+                    </div>
+                {/*<ProfileStatus status={status.data} updateStatus={updateStatus}/>*/}
+                {/*<i>{profile.lookingForAJobDescription}</i>*/}
             </div>
+            {isOwner && <input className={s.chooseFile} type={"file"} onChange={onMainPhotoSelected}/>}
         </div>
     )
 };
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
     return (
-        <div>
+        <div className={s.profileInfo}>
             {isOwner && <div>
-                <button onClick={goToEditMode}>edit</button>
+                <button className={s.editButton} onClick={goToEditMode}>edit</button>
             </div>}
             <div>
                 <b>Full name</b>: {profile.fullName}

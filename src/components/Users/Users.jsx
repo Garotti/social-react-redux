@@ -5,8 +5,6 @@ import User from "./User";
 
 
 let Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, users, ...props}) => {
-    // class={s.render} change appearance userPage
-    // бага при переходе на Users сверху пропадаэт HeaderContainer
     return (
         <div>
             <div className={s.render}>

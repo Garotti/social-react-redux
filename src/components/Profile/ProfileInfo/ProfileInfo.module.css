@@ -6,6 +6,10 @@
     height: 300px;
 }
 .descBlock{
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    grid-template-rows: 310px auto;
 }
 .descBlock img {
     border: 3px solid aqua;
@@ -17,4 +21,35 @@
 }
 .contact{
     padding-left: 10px;
+}
+.aboutMe{
+    /*background: white;*/
+}
+.chooseFile{
+    padding: 5px;
+    outline: none;
+    background: aqua;
+    width: 200px;
+    height: 20px;
+}
+.chooseFile:hover{
+    cursor: pointer;
+}
+.editButton{
+    background: aquamarine;
+    border: 2px solid aquamarine;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+.editButton:hover{
+    background: #2a69a1;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+.formSave input{
+    border-radius: 5px;
+}
+.profileInfo div{
+    padding: 5px;
 }

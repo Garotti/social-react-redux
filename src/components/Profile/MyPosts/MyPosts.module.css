@@ -20,3 +20,22 @@
 .postsBlock{
     padding: 10px;
 }
+.buttonAddPost{
+    background: aquamarine;
+    border: 2px solid aquamarine;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 7px 0 10px 0;
+}
+.buttonAddPost:hover{
+    color: white;
+    background: #2a69a1;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+.postForm{
+    margin-top: 10px;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+}

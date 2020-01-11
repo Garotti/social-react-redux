@@ -9,22 +9,48 @@ header img {
     background: rgb(143,201,213);
     background: linear-gradient(37deg, rgba(143,201,213,1) 24%, rgba(62,119,255,1) 85%);
 }
-.qq{
+.headerPhoto{
     float: right;
     padding-right: 50px;
 }
-.qq img {
+.headerPhoto img {
     border-radius: 50px;
     width: 50px;
     height: 50px;
 }
-.qq button{
+.headerPhoto button{
     margin-left: 100px;
 }
-.qq span {
+.headerPhoto span {
     margin-left: 100px;
 }
-.gg{
+.authLogin{
     float: right;
     padding-right: 50px;
+}
+.logout{
+    color: black;
+    border-radius: 5px;
+    background: aquamarine;
+    border: 2px solid aquamarine;
+    padding: 5px;
+}
+.logout:hover{
+    background: #2a69a1;
+    color: white;
+    border: 2px solid white;
+}
+.login{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background: aquamarine;
+    border-radius: 5px;
+    border: 2px solid aquamarine;
+}
+.login:hover{
+    background: none;
+    color: white;
+    border: 2px solid white;
+
 }

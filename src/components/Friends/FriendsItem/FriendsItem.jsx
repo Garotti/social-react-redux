@@ -7,7 +7,6 @@ const FriendsItem = (props) => {
     return (
         <div>
             <NavLink to={`/friends/${props.id}`}> {props.name} </NavLink>
-
         </div>
 
     );

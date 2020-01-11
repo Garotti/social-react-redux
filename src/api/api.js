@@ -1,16 +1,25 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-   withCredentials: true,
-   baseURL: 'https://social-network.samuraijs.com/api/1.0/',
-   headers: {
+    withCredentials: true,
+    baseURL: 'https://social-network.samuraijs.com/api/1.0/',
+    headers: {
         "API-KEY": "25c18729-58e9-4033-b31a-8924601451d6"
     }
 });
+export const newsAPI = {
+    getNews() {
+        return axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=e4a894921a614b8da4700625907b3c51")
+            .then(res => {
+                return res.data;
+            })
+    }
+};
+
 export const usersAPI = {
-    getUsers(currentPage,pageSize) {
-        return  instance.get(`users?page=${currentPage}&count=${pageSize}`,)
-            .then(res =>{
+    getUsers(currentPage, pageSize) {
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`,)
+            .then(res => {
                 return res.data;
             });
     },
@@ -22,7 +31,7 @@ export const usersAPI = {
     },
 
     followUser(u) {
-        return instance.post(`/follow/${u}`,{})
+        return instance.post(`/follow/${u}`, {})
             .then(res => {
                 return res.data;
             })
@@ -59,8 +68,8 @@ export const authAPI = {
     me() {
         return instance.get(`auth/me`,)
     },
-    login(email,password,rememberMe = false, captcha = "") {
-        return instance.post(`auth/login`, {email,password,rememberMe,captcha})
+    login(email, password, rememberMe = false, captcha = "") {
+        return instance.post(`auth/login`, {email, password, rememberMe, captcha})
     },
     logout() {
         return instance.delete(`auth/login`)

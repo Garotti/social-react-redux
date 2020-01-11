@@ -7,11 +7,12 @@ import FriendsContainer from "./components/Friends/FriendsContainer";
 import LoginPage from "./components/Login/Login";
 import {connect} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
-import Preloader from "./components/common/Preloader/Preloader";
 import {compose} from "redux";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import {withSuspense} from "./hoc/withSuspense";
+import News from "./components/News/News";
+import NewsContainer from "./components/News/NewsContainer";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
@@ -22,7 +23,7 @@ class App extends React.Component {
     componentDidMount() {
         this.props.initializeApp();
     }
-//main
+
     render() {
         // if (!this.props.initialized){
         //     return <Preloader />
@@ -36,7 +37,7 @@ class App extends React.Component {
                     <HeaderContainer/>
                     <Navbar/>
                     <div className={'app-wrapper-content '}>
-                        {/*<Redirect from={'/'} to={'/profile'}/>*/}
+                        {/*<Redirect from={'/'} to={'/friends'}/>*/}
                         <Route path={'/dialogs'}
                                render={withSuspense(DialogsContainer)}/>
                         <Route path={'/profile/:userId?'}
@@ -45,6 +46,8 @@ class App extends React.Component {
                                render={() => <FriendsContainer/>}/>
                         <Route path={'/users'}
                                render={() => <UsersContainer/>}/>
+                        <Route path={'/news'}
+                               render={() => <NewsContainer/>}/>
                         <Route path={'/login'}
                                render={() => <LoginPage/>}/>
                     </div>

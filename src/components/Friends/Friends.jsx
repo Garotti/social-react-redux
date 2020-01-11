@@ -6,32 +6,35 @@ import Status from './Status/Status';
 
 const Friends = (props) => {
 
-    const friendsElement = props.dialogsPage.dialogs.map(name => {
-       return (
-           <FriendsItem name={name.name} />
-       )
-    });
 
     const statusElement = props.dialogsPage.status.map(st => {
-        return(
+        return (
             <Status status={st.status}/>
         )
     });
+
+
+    const friendsElement = props.dialogsPage.dialogs.map(name => {
+        debugger;
+        return (
+
+            <FriendsItem name={name.name} key={name.id}/>
+        )
+    });
+
 
     return (
         <div className={s.content}>
             <div className={s.friendsNav}>
                 <div>All friends</div>
                 <div>Friends online</div>
-                <NavLink to={'/users'}>find users</NavLink>
+                <NavLink className={s.usersStyle} to={'/users'}>find users</NavLink>
             </div>
-            <div>find friends</div>
             <div>
                 <img src="" alt=""/>
                 <div>
-                {friendsElement}
+                    {friendsElement}
                 </div>
-                <p>{statusElement}</p>
                 <NavLink to={'/dialogs'}>messages</NavLink>
             </div>
             <div>

@@ -6,12 +6,13 @@ import {PostReduxForm} from "./MyPostForm/MyPostsForm";
 const MyPosts = (props) => {
     const postsData = props.posts.map( post => {
         return(
-            <Post message={post.message} like={post.likeCount}/>
+            <Post key={post.id} message={post.message} like={post.likeCount}/>
         )
     });
 
     const onSubmit = (values) => {
-        props.addPost(values.newPostText)
+        props.addPost(values.newPostText);
+        values.newPostText = "";
     };
 
     return (
