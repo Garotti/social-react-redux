@@ -1,7 +1,4 @@
-import {newsAPI, profileAPI, usersAPI} from '../api/api';
-import {updateObjectInArray} from "../utils/object-helpers";
-import {setUsersProfile} from "./profile-reducer";
-import {setUsers, setUsersTotalCount, toggleIsFetching} from "./users-reducer";
+import {newsAPI} from '../api/api';
 
 const SET_NEWS = "SET_NEWS";
 const SET_STATUS = "SET_STATUS";

@@ -7,6 +7,15 @@ const instance = axios.create({
         "API-KEY": "25c18729-58e9-4033-b31a-8924601451d6"
     }
 });
+
+export const musicAPI = {
+    getMusic() {
+       return axios.get(`https://api.napster.com/v2.2/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm`)
+            .then(res => {
+                return res.data
+            })
+    }
+};
 export const newsAPI = {
     getNews() {
         return axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=e4a894921a614b8da4700625907b3c51")

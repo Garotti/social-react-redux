@@ -1,0 +1,23 @@
+.main{
+    margin-bottom: 5px;
+    overflow: hidden;
+    background: cornflowerblue;
+}
+.artistName{
+    margin: 5px;
+    color: black;
+}
+.trackName{
+    padding: 5px;
+}
+.icon{
+    font-size: 30px;
+    color: wheat;
+    background: blueviolet;
+    padding: 5px;
+    border-radius: 5px;
+}
+.icon:hover{
+    cursor: pointer;
+    background: crimson;
+}

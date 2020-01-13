@@ -13,6 +13,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 import {withSuspense} from "./hoc/withSuspense";
 import News from "./components/News/News";
 import NewsContainer from "./components/News/NewsContainer";
+import MusicContainer from "./components/Music/MusicContainer";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
@@ -50,6 +51,8 @@ class App extends React.Component {
                                render={() => <NewsContainer/>}/>
                         <Route path={'/login'}
                                render={() => <LoginPage/>}/>
+                        <Route path={'/music'}
+                               render={() => <MusicContainer/>}/>
                     </div>
                 </div>
             </div>
@@ -78,4 +81,4 @@ const mapStateToProps = (state) => ({
 
 export default compose(
     withRouter,
-    connect(mapStateToProps,{initializeApp}))(App);
+    connect(mapStateToProps, {initializeApp}))(App);
