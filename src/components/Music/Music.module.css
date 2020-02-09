@@ -21,3 +21,11 @@
     cursor: pointer;
     background: crimson;
 }
+.select{
+    color: black;
+}
+.paginator{
+    background: #2a69a1;
+    color: black;
+    height: 200px;
+}

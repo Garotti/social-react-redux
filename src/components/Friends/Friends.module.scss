@@ -1,0 +1,45 @@
+.content{
+}
+.friendsNav{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    border: 1px solid black;
+    align-items: center;
+    justify-items: center;
+}
+.friendsNav button{
+    width: 100px;
+    grid-column-end: 5;
+    margin-right: 50px;
+}
+.usersStyle{
+    padding: 10px;
+    border: 2px solid deepskyblue;
+    background: deepskyblue;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+.usersStyle:hover{
+    color: white;
+    border: 2px solid white;
+    background: none;
+}
+.friendLink{
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: inline-block;
+    width: 100px;
+    background: deepskyblue;
+    border-radius: 10px;
+    &:hover{
+        background: darken(aquamarine, 40%);
+    }
+}
+.friend_foto{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}

@@ -2,11 +2,11 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let initialState = {
     dialogs: [
-        {id: 1, name: 'Dimon'},
-        {id: 2, name: 'Andrey'},
-        {id: 3, name: 'Sveta'},
-        {id: 4, name: 'Tanatos'},
-        {id: 5, name: 'Makar'},
+        {id: 1, name: 'Dima', img: 'https://www.gametech.ru/sadm_images/StarcraftMassRecall_base.jpg'},
+        {id: 2, name: 'Andrey', img: 'https://www.gametech.ru/sadm_images/StarcraftMassRecall_base.jpg'},
+        {id: 3, name: 'Sveta',img: 'https://www.gametech.ru/sadm_images/StarcraftMassRecall_base.jpg' },
+        {id: 4, name: 'Melania', img: 'https://www.gametech.ru/sadm_images/StarcraftMassRecall_base.jpg'},
+        {id: 5, name: 'Makar', img: 'https://www.gametech.ru/sadm_images/StarcraftMassRecall_base.jpg'},
     ],
     messages: [
         {id: 1, message: 'Hello'},

@@ -11,7 +11,6 @@ import {compose} from "redux";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import {withSuspense} from "./hoc/withSuspense";
-import News from "./components/News/News";
 import NewsContainer from "./components/News/NewsContainer";
 import MusicContainer from "./components/Music/MusicContainer";
 

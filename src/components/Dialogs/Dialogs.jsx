@@ -6,7 +6,6 @@ import {Redirect} from "react-router-dom";
 import {AddMessageFormRedux} from "./MessageForm/AddMessageForm";
 
 const Dialogs = (props) => {
-
     let state = props.dialogsPage;
 
     //--Отрисовка стейта

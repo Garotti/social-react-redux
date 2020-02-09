@@ -3,7 +3,10 @@ import {musicAPI} from "../api/api";
 const SET_MUSIC = 'SET_MUSIC';
 
 let initialState = {
-    music: []
+    music: [],
+    pageSize: 10,
+    totalCount: 99,
+    currentPage: 1
 };
 
 const musicReducer = (state = initialState, action) => {
@@ -22,7 +25,7 @@ const musicReducer = (state = initialState, action) => {
 export const setMusicAC = (music) => ({type: SET_MUSIC, music});
 
 export const getMusic = () => async (dispatch) => {
-    let data = await musicAPI.getMusic()
+    let data = await musicAPI.getMusic();
     dispatch(setMusicAC(data.tracks))
 };
 

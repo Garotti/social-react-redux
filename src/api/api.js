@@ -9,8 +9,8 @@ const instance = axios.create({
 });
 
 export const musicAPI = {
-    getMusic() {
-       return axios.get(`https://api.napster.com/v2.2/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm`)
+    getMusic(currentPage, pageSize) {
+       return axios.get(`https://api.napster.com/v2.2/tracks/top?limit=${currentPage}&apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm`)
             .then(res => {
                 return res.data
             })
