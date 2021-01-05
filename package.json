@@ -5,7 +5,7 @@
   "homepage": "https://mvchz.github.io/social-react-redux",
   "dependencies": {
     "@material-ui/core": "^4.8.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "font-awesome": "^4.7.0",
     "react": "^16.11.0",
     "react-autosize-textarea": "^7.0.0",
